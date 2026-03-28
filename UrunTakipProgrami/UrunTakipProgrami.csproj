@@ -48,6 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSetim.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetim.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmGrafikler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +70,12 @@
     </Compile>
     <Compile Include="frmAdmin.Designer.cs">
       <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMusteri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMusteri.Designer.cs">
+      <DependentUpon>frmMusteri.cs</DependentUpon>
     </Compile>
     <Compile Include="frmYonlendirme.cs">
       <SubType>Form</SubType>
@@ -95,6 +106,9 @@
     <EmbeddedResource Include="frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMusteri.resx">
+      <DependentUpon>frmMusteri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmYonlendirme.resx">
       <DependentUpon>frmYonlendirme.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +127,17 @@
     <EmbeddedResource Include="UrunlerFormu.resx">
       <DependentUpon>UrunlerFormu.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataSetim.xsc">
+      <DependentUpon>DataSetim.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetim.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetim.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetim.xss">
+      <DependentUpon>DataSetim.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
