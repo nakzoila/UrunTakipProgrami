@@ -18,6 +18,8 @@ namespace UrunTakipProgrami
         {
             InitializeComponent();
         }
+        // SQL Bağalntı Adresim : 
+        SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-QBP0E0A;Initial Catalog=dbUrun;Integrated Security=True");
 
         private void çıkışToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -25,11 +27,12 @@ namespace UrunTakipProgrami
             yonlendirme.Show();
             this.Hide();
         }
-        SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-QBP0E0A;Initial Catalog=dbUrun;Integrated Security=True");
+
+        
 
         private void btnListele_Click(object sender, EventArgs e)
         {
-
+            //Listeleme İşlemi
             SqlCommand komut1 = new SqlCommand("SELECT * FROM tblKategori", baglanti);
             SqlDataAdapter dataAdapTersNesnesi = new SqlDataAdapter(komut1);
             DataTable dataTableNesnesi = new DataTable();

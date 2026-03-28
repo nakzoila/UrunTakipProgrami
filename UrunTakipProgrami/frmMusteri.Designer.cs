@@ -45,15 +45,15 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtSoyad = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnAra = new System.Windows.Forms.Button();
+            this.rdbSehir = new System.Windows.Forms.RadioButton();
+            this.rdbSoyad = new System.Windows.Forms.RadioButton();
+            this.rdbAd = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.txtAranacak = new System.Windows.Forms.TextBox();
-            this.rdbAd = new System.Windows.Forms.RadioButton();
-            this.rdbSoyad = new System.Windows.Forms.RadioButton();
-            this.rdbSehir = new System.Windows.Forms.RadioButton();
-            this.btnAra = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -224,6 +224,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ürün Bilgi Kartı";
             // 
+            // txtSoyad
+            // 
+            this.txtSoyad.Location = new System.Drawing.Point(112, 140);
+            this.txtSoyad.Name = "txtSoyad";
+            this.txtSoyad.Size = new System.Drawing.Size(210, 29);
+            this.txtSoyad.TabIndex = 3;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -238,13 +245,6 @@
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // txtSoyad
-            // 
-            this.txtSoyad.Location = new System.Drawing.Point(112, 140);
-            this.txtSoyad.Name = "txtSoyad";
-            this.txtSoyad.Size = new System.Drawing.Size(210, 29);
-            this.txtSoyad.TabIndex = 3;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnAra);
@@ -258,6 +258,58 @@
             this.groupBox2.Size = new System.Drawing.Size(1111, 100);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
+            // 
+            // btnAra
+            // 
+            this.btnAra.Font = new System.Drawing.Font("Microsoft Tai Le", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnAra.Location = new System.Drawing.Point(863, 18);
+            this.btnAra.Name = "btnAra";
+            this.btnAra.Size = new System.Drawing.Size(242, 76);
+            this.btnAra.TabIndex = 15;
+            this.btnAra.Text = "Ara";
+            this.btnAra.UseVisualStyleBackColor = true;
+            this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
+            // 
+            // rdbSehir
+            // 
+            this.rdbSehir.AutoSize = true;
+            this.rdbSehir.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rdbSehir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.rdbSehir.Location = new System.Drawing.Point(775, 15);
+            this.rdbSehir.Name = "rdbSehir";
+            this.rdbSehir.Size = new System.Drawing.Size(95, 35);
+            this.rdbSehir.TabIndex = 14;
+            this.rdbSehir.TabStop = true;
+            this.rdbSehir.Text = "Şehir";
+            this.rdbSehir.UseVisualStyleBackColor = true;
+            // 
+            // rdbSoyad
+            // 
+            this.rdbSoyad.AutoSize = true;
+            this.rdbSoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rdbSoyad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.rdbSoyad.Location = new System.Drawing.Point(660, 53);
+            this.rdbSoyad.Name = "rdbSoyad";
+            this.rdbSoyad.Size = new System.Drawing.Size(109, 35);
+            this.rdbSoyad.TabIndex = 14;
+            this.rdbSoyad.TabStop = true;
+            this.rdbSoyad.Text = "Soyad";
+            this.rdbSoyad.UseVisualStyleBackColor = true;
+            // 
+            // rdbAd
+            // 
+            this.rdbAd.AutoSize = true;
+            this.rdbAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rdbAd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.rdbAd.Location = new System.Drawing.Point(660, 15);
+            this.rdbAd.Name = "rdbAd";
+            this.rdbAd.Size = new System.Drawing.Size(71, 35);
+            this.rdbAd.TabIndex = 14;
+            this.rdbAd.TabStop = true;
+            this.rdbAd.Text = "Adı";
+            this.rdbAd.UseVisualStyleBackColor = true;
+            this.rdbAd.CheckedChanged += new System.EventHandler(this.rdbAd_CheckedChanged);
             // 
             // label5
             // 
@@ -278,58 +330,6 @@
             this.txtAranacak.Size = new System.Drawing.Size(619, 38);
             this.txtAranacak.TabIndex = 12;
             // 
-            // rdbAd
-            // 
-            this.rdbAd.AutoSize = true;
-            this.rdbAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rdbAd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.rdbAd.Location = new System.Drawing.Point(660, 15);
-            this.rdbAd.Name = "rdbAd";
-            this.rdbAd.Size = new System.Drawing.Size(71, 35);
-            this.rdbAd.TabIndex = 14;
-            this.rdbAd.TabStop = true;
-            this.rdbAd.Text = "Adı";
-            this.rdbAd.UseVisualStyleBackColor = true;
-            this.rdbAd.CheckedChanged += new System.EventHandler(this.rdbAd_CheckedChanged);
-            // 
-            // rdbSoyad
-            // 
-            this.rdbSoyad.AutoSize = true;
-            this.rdbSoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rdbSoyad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.rdbSoyad.Location = new System.Drawing.Point(660, 53);
-            this.rdbSoyad.Name = "rdbSoyad";
-            this.rdbSoyad.Size = new System.Drawing.Size(109, 35);
-            this.rdbSoyad.TabIndex = 14;
-            this.rdbSoyad.TabStop = true;
-            this.rdbSoyad.Text = "Soyad";
-            this.rdbSoyad.UseVisualStyleBackColor = true;
-            // 
-            // rdbSehir
-            // 
-            this.rdbSehir.AutoSize = true;
-            this.rdbSehir.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rdbSehir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.rdbSehir.Location = new System.Drawing.Point(775, 15);
-            this.rdbSehir.Name = "rdbSehir";
-            this.rdbSehir.Size = new System.Drawing.Size(95, 35);
-            this.rdbSehir.TabIndex = 14;
-            this.rdbSehir.TabStop = true;
-            this.rdbSehir.Text = "Şehir";
-            this.rdbSehir.UseVisualStyleBackColor = true;
-            // 
-            // btnAra
-            // 
-            this.btnAra.Font = new System.Drawing.Font("Microsoft Tai Le", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnAra.Location = new System.Drawing.Point(863, 18);
-            this.btnAra.Name = "btnAra";
-            this.btnAra.Size = new System.Drawing.Size(242, 76);
-            this.btnAra.TabIndex = 15;
-            this.btnAra.Text = "Ara";
-            this.btnAra.UseVisualStyleBackColor = true;
-            this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
-            // 
             // frmMusteri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -340,10 +340,10 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmMusteri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmMusteri";
+            this.Text = "MÜŞTERİ KARTI";
             this.contextMenuStrip1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

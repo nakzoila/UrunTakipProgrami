@@ -83,25 +83,6 @@ namespace UrunTakipProgrami
                 dataGridView1.DataSource = tb.araSehir(txtAranacak.Text);
             }
 
-
-
-            /*
-            
-             
-             * SQL'de Procedure Oluşturmak için 
-            ************************************************************************
-            CREATE PROCEDURE satisListesi --Procedure oluşturmak için kullanılır. AS komutu artından yapılacak işlem yazılır. 
-            AS
-            SELECT ID, ad + ' '+soyad AS 'Müşteri Adı Soyadı', urunAd, adet, fiyat, toplam, tarih 
-            FROM tblSatislar
-            INNER JOIN tblUrunler
-            ON tblSatislar.urun=tblUrunler.urunID
-            INNER JOIN tblMusteri
-            ON tblSatislar.ID=tblMusteri.musteriID
-
-
-
-            */
         }
     }
 }
